@@ -103,8 +103,10 @@
 
     .lead {
       font-size: clamp(1.05rem, 2vw, 1.18rem);
-      max-width: 58ch;
+      max-width: 34rem;
       color: #384252;
+      text-align: center;
+      text-wrap: balance;
     }
 
     .small { font-size: 0.94rem; color: var(--muted-2); }
@@ -165,10 +167,10 @@
       gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
+      margin-left: auto;
     }
 
-    .nav-links a,
-    .nav-actions a {
+    .nav-links a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -184,8 +186,7 @@
       text-align: center;
     }
 
-    .nav-links a:hover,
-    .nav-actions a:hover {
+    .nav-links a:hover {
       border-color: #c3d8ea;
       transform: translateY(-1px);
       box-shadow: var(--shadow-soft);
@@ -195,13 +196,6 @@
       background: var(--navy);
       color: #ffffff;
       border-color: var(--navy);
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
     }
 
     .btn {
@@ -254,12 +248,13 @@
     .hero-media,
     .pricing-strip,
     .symptom-card,
-    .process-column,
+    .process-band,
     .gallery-card,
     .faq-item,
     .contact-shell,
     .find-us,
-    .code-chip {
+    .code-chip,
+    .vehicle-service-note {
       background: rgba(255,255,255,0.9);
       border: 1px solid var(--line);
       border-radius: var(--radius);
@@ -271,9 +266,10 @@
     .find-us,
     .card,
     .symptom-card,
-    .process-column,
+    .process-band,
     .gallery-card,
-    .code-chip {
+    .code-chip,
+    .vehicle-service-note {
       padding: clamp(22px, 3vw, 34px);
     }
 
@@ -289,7 +285,16 @@
     }
 
     .hero-copy h1,
-    .hero-copy .lead { margin-left: auto; margin-right: auto; }
+    .hero-copy .lead {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-copy h1 {
+      max-width: 8.2ch;
+      text-align: center;
+      text-wrap: balance;
+    }
 
     .hero-actions {
       display: flex;
@@ -353,6 +358,35 @@
       line-height: 1.45;
     }
 
+    .vehicle-service-note {
+      margin-top: 18px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: linear-gradient(180deg, #ffffff, #f8fbfd);
+    }
+
+    .vehicle-service-note strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.22rem;
+      margin-bottom: 4px;
+      letter-spacing: -0.03em;
+    }
+
+    .vehicle-price {
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: var(--brand-soft);
+      border: 1px solid #bfeeff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      white-space: nowrap;
+    }
+
     .section-head {
       display: flex;
       justify-content: space-between;
@@ -411,7 +445,7 @@
     .symptom-card h3,
     .gallery-card h3,
     .card h3,
-    .process-column h3,
+    .process-band h3,
     .contact-shell h3,
     .find-us h3 { margin-bottom: 12px; }
 
@@ -430,13 +464,12 @@
       letter-spacing: -0.03em;
     }
 
-    .process-wrap {
+    .process-stack {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
+      gap: 18px;
     }
 
-    .process-column {
+    .process-band {
       background: linear-gradient(180deg, #ffffff, #fafbfd);
     }
 
@@ -461,41 +494,46 @@
       flex-shrink: 0;
     }
 
-    .step-list {
+    .process-mini-grid {
       display: grid;
       gap: 12px;
-      counter-reset: step;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
-    .step {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 14px;
-      padding: 16px;
-      border-radius: 20px;
+    .mini-step {
+      padding: 15px 14px;
+      border-radius: 18px;
       border: 1px solid var(--line);
       background: var(--card-soft);
+      min-height: 118px;
     }
 
-    .step::before {
-      counter-increment: step;
-      content: counter(step);
-      width: 34px;
-      height: 34px;
+    .mini-step-number {
+      width: 30px;
+      height: 30px;
       border-radius: 50%;
       display: grid;
       place-items: center;
       background: linear-gradient(180deg, #18cbfa, #0ea5d9);
       color: #ffffff;
+      font-size: 0.92rem;
       font-weight: 800;
+      margin-bottom: 10px;
       box-shadow: var(--shadow-soft);
-      margin-top: 2px;
     }
 
-    .step strong {
+    .mini-step strong {
       display: block;
       color: var(--navy);
-      margin-bottom: 3px;
+      margin-bottom: 5px;
+      font-size: 0.98rem;
+      line-height: 1.2;
+    }
+
+    .mini-step p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.45;
     }
 
     .shipping-box {
@@ -605,52 +643,17 @@
 
     form { display: grid; gap: 16px; }
 
-    .radio-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
     .form-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .radio-card,
     .field,
     .check {
       border-radius: 20px;
       border: 1px solid var(--line);
       background: #ffffff;
-    }
-
-    .radio-card {
-      padding: 18px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 14px;
-      align-items: center;
-      min-height: 110px;
-      box-shadow: var(--shadow-soft);
-    }
-
-    .radio-card input {
-      margin: 0;
-      accent-color: var(--brand);
-      transform: scale(1.15);
-    }
-
-    .radio-card strong {
-      display: inline;
-      color: var(--navy);
-      font-size: 1rem;
-    }
-
-    .radio-card span {
-      color: var(--muted);
-      font-size: 0.96rem;
-      line-height: 1.5;
     }
 
     .field {
@@ -832,17 +835,13 @@
 
     @media (max-width: 1140px) {
       .nav { align-items: start; flex-direction: column; }
-      .nav-links,
-      .nav-actions { width: 100%; }
-      .nav-links { justify-content: flex-start; }
-      .nav-actions { justify-content: flex-start; }
+      .nav-links { width: 100%; justify-content: flex-start; margin-left: 0; }
       .hero-grid,
       .contact-grid,
       .pricing-strip,
-      .code-grid,
       .grid-3,
       .grid-2,
-      .process-wrap {
+      .process-mini-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
@@ -853,11 +852,9 @@
       .hero-grid,
       .contact-grid,
       .pricing-strip,
-      .code-grid,
       .grid-3,
       .grid-2,
-      .process-wrap,
-      .radio-grid,
+      .process-mini-grid,
       .form-grid,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -866,11 +863,11 @@
         flex-direction: column;
         align-items: start;
       }
-      .nav-actions a:first-child { display: none; }
       .mobile-bar { display: grid; }
       .footer { padding-bottom: 100px; }
       .hero-media .media-placeholder,
       .hero-media .media-image { min-height: 300px; }
+      .vehicle-service-note { align-items: start; }
     }
   </style>
   <script type="application/ld+json">
@@ -939,11 +936,6 @@
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
-
-      <div class="nav-actions">
-        <a href="tel:07833823384">Call 0783 382 3384</a>
-        <a class="btn btn-primary" href="#contact">Book Your Free Test Now</a>
-      </div>
     </div>
   </div>
 
@@ -979,6 +971,14 @@
           <div class="pricing-tile"><strong>+£19.99</strong><span>Same-day turnaround</span></div>
           <div class="pricing-tile"><strong>+£29.99</strong><span>Reliability package</span></div>
         </div>
+
+        <div class="vehicle-service-note">
+          <div>
+            <strong>Complete vehicle service available</strong>
+            <p>You can also bring the complete vehicle to us. We can remove, inspect, repair and refit the module to the vehicle.</p>
+          </div>
+          <div class="vehicle-price">£799 total</div>
+        </div>
       </div>
     </section>
 
@@ -1005,21 +1005,17 @@
               <li>PRNDS flashing on the dashboard</li>
               <li>Gear indicator missing or blank</li>
               <li>Diagnostic tools cannot detect the TCM</li>
+              <li>Communication faults stored alongside module faults</li>
             </ul>
           </div>
 
           <div class="card">
-            <h3>Common fault codes and related signs</h3>
-            <div class="code-grid" style="margin-bottom: 18px; grid-template-columns: 1fr;">
+            <h3>Common fault codes</h3>
+            <div style="display: grid; gap: 14px;">
               <div class="code-chip" style="padding: 18px 20px;"><strong>U0101</strong><p>Lost Communication with TCM</p></div>
               <div class="code-chip" style="padding: 18px 20px;"><strong>P1604</strong><p>Internal Control Module Malfunction</p></div>
               <div class="code-chip" style="padding: 18px 20px;"><strong>P0562</strong><p>System Voltage Low</p></div>
             </div>
-            <ul class="clean-list">
-              <li>Car will not start or loses drive</li>
-              <li>Communication faults stored alongside module faults</li>
-              <li>Suitable for VW, Audi, Seat and Skoda vehicles fitted with DQ200, 0AM and 0CW gearboxes</li>
-            </ul>
           </div>
         </div>
       </div>
@@ -1035,35 +1031,35 @@
           <p>From removal and packing to inspection, repair and return.</p>
         </div>
 
-        <div class="process-wrap">
-          <div class="process-column">
+        <div class="process-stack">
+          <div class="process-band">
             <div class="process-title">
               <h3>Part 1: What you do</h3>
               <span class="process-badge">1</span>
             </div>
-            <div class="step-list">
-              <div class="step"><div><strong>Remove the module</strong><p>Remove the transmission control module from the mechatronic unit.</p></div></div>
-              <div class="step"><div><strong>Clean the module</strong><p>Make sure the outside is clean and dry before packing.</p></div></div>
-              <div class="step"><div><strong>Wrap it properly</strong><p>Use bubble wrap generously to protect the unit from impact.</p></div></div>
-              <div class="step"><div><strong>Use a sturdy box</strong><p>Do not send it in a thin bag or lightly padded envelope.</p></div></div>
-              <div class="step"><div><strong>Include your details</strong><p>Add your contact details, vehicle details and any DTCs if available.</p></div></div>
-              <div class="step"><div><strong>Add a prepaid return label</strong><p>Please place a prepaid return label inside the parcel.</p></div></div>
-              <div class="step"><div><strong>Send the unit</strong><p>Choose your courier and send the parcel to us.</p></div></div>
+            <div class="process-mini-grid">
+              <div class="mini-step"><div class="mini-step-number">1</div><strong>Remove the module</strong><p>Remove the transmission control module from the mechatronic unit.</p></div>
+              <div class="mini-step"><div class="mini-step-number">2</div><strong>Clean the module</strong><p>Make sure the outside is clean and dry before packing.</p></div>
+              <div class="mini-step"><div class="mini-step-number">3</div><strong>Wrap it properly</strong><p>Use bubble wrap generously to protect it from impact.</p></div>
+              <div class="mini-step"><div class="mini-step-number">4</div><strong>Use a sturdy box</strong><p>Do not send it in a thin bag or lightly padded envelope.</p></div>
+              <div class="mini-step"><div class="mini-step-number">5</div><strong>Include your details</strong><p>Add contact details, vehicle details and mileage.</p></div>
+              <div class="mini-step"><div class="mini-step-number">6</div><strong>Include DTCs if available</strong><p>Add any fault codes you have already read from the car.</p></div>
+              <div class="mini-step"><div class="mini-step-number">7</div><strong>Add return label and send</strong><p>Include a prepaid return label and send with your chosen courier.</p></div>
             </div>
           </div>
 
-          <div class="process-column">
+          <div class="process-band">
             <div class="process-title">
               <h3>Part 2: What we do</h3>
               <span class="process-badge">2</span>
             </div>
-            <div class="step-list">
-              <div class="step"><div><strong>Receive</strong><p>We receive the unit and log it in.</p></div></div>
-              <div class="step"><div><strong>Inspect</strong><p>We inspect condition, prior opening and repair viability.</p></div></div>
-              <div class="step"><div><strong>Repair</strong><p>Where viable, we carry out the no communication repair.</p></div></div>
-              <div class="step"><div><strong>Test</strong><p>The unit is tested to confirm communication and service outcome.</p></div></div>
-              <div class="step"><div><strong>Report and payment</strong><p>We confirm the result and arrange payment once the outcome is known.</p></div></div>
-              <div class="step"><div><strong>Return</strong><p>The unit is sent back using the prepaid return label provided.</p></div></div>
+            <div class="process-mini-grid">
+              <div class="mini-step"><div class="mini-step-number">1</div><strong>Receive</strong><p>We receive the unit and log it in.</p></div>
+              <div class="mini-step"><div class="mini-step-number">2</div><strong>Inspect</strong><p>We inspect condition, prior opening and repair viability.</p></div>
+              <div class="mini-step"><div class="mini-step-number">3</div><strong>Repair</strong><p>Where viable, we carry out the no communication repair.</p></div>
+              <div class="mini-step"><div class="mini-step-number">4</div><strong>Test</strong><p>The unit is tested to confirm communication and service outcome.</p></div>
+              <div class="mini-step"><div class="mini-step-number">5</div><strong>Report and payment</strong><p>We confirm the result and arrange payment once the outcome is known.</p></div>
+              <div class="mini-step"><div class="mini-step-number">6</div><strong>Return</strong><p>The unit is sent back using the prepaid return label provided.</p></div>
             </div>
           </div>
         </div>
@@ -1088,11 +1084,11 @@
       <div class="container">
         <div class="grid-3">
           <article class="gallery-card">
-            <h3>Complete DQ200 TCM module</h3>
+            <h3>DQ200 TCM Module</h3>
             <div class="media-shell">
-              <div class="media-placeholder">Insert image here: complete DQ200 TCM module</div>
+              <div class="media-placeholder">Insert image here: DQ200 TCM module</div>
               <!-- Replace the placeholder above with:
-              <img src="images/dq200-tcm-complete.jpg" alt="Complete DQ200 TCM module" class="media-image" loading="lazy">
+              <img src="images/dq200-tcm-complete.jpg" alt="DQ200 TCM module" class="media-image" loading="lazy">
               -->
             </div>
           </article>
@@ -1108,11 +1104,11 @@
           </article>
 
           <article class="gallery-card">
-            <h3>Electronic repair lab</h3>
+            <h3>Our Lab</h3>
             <div class="media-shell">
-              <div class="media-placeholder">Insert image here: electronic repair lab</div>
+              <div class="media-placeholder">Insert image here: our lab</div>
               <!-- Replace the placeholder above with:
-              <img src="images/electronic-repair-lab.jpg" alt="Electronic repair lab" class="media-image" loading="lazy">
+              <img src="images/electronic-repair-lab.jpg" alt="Our electronic repair lab" class="media-image" loading="lazy">
               -->
             </div>
           </article>
@@ -1156,6 +1152,10 @@
             <div class="faq-answer"><div class="faq-answer-inner"><p>The customer chooses the courier, is responsible for sending the unit to us and must provide a prepaid return label. We are not liable for loss, damage, delay or destruction in transit.</p></div></div>
           </div>
           <div class="faq-item">
+            <button class="faq-question" type="button"><span>Can I bring the complete vehicle instead of just the module?</span><span>+</span></button>
+            <div class="faq-answer"><div class="faq-answer-inner"><p>Yes. We can also have the complete vehicle with us, remove the module, inspect it, repair it where viable and refit it to the vehicle for a total of £799.</p></div></div>
+          </div>
+          <div class="faq-item">
             <button class="faq-question" type="button"><span>Do I need to book in advance?</span><span>+</span></button>
             <div class="faq-answer"><div class="faq-answer-inner"><p>Booking first is recommended so we can expect the parcel and confirm options such as same-day turnaround.</p></div></div>
           </div>
@@ -1181,27 +1181,15 @@
             <form action="https://formspree.io/f/your-form-id" method="POST">
               <input type="hidden" name="service" value="DQ200 no communication repair enquiry">
 
-              <div>
-                <div style="margin-bottom: 8px; font-weight: 600; color: #374151;">Preferred contact method *</div>
-                <p class="small" style="margin-bottom: 16px;">This helps us reply the way you actually want.</p>
-                <div class="radio-grid">
-                  <label class="radio-card">
-                    <input type="radio" name="preferred_contact_method" value="Call during working hours" required>
-                    <span><strong>Call during working hours</strong> Best for quick discussion</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="preferred_contact_method" value="WhatsApp" required>
-                    <span><strong>WhatsApp</strong> Useful for photos and messages</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="preferred_contact_method" value="Email" required>
-                    <span><strong>Email</strong> Best for written quotes</span>
-                  </label>
-                  <label class="radio-card">
-                    <input type="radio" name="preferred_contact_method" value="SMS" required>
-                    <span><strong>SMS</strong> Simple text reply</span>
-                  </label>
-                </div>
+              <div class="field full">
+                <label for="preferred-contact-method">Preferred contact method *</label>
+                <select id="preferred-contact-method" name="preferred_contact_method" required>
+                  <option value="" selected disabled>Select preferred contact method</option>
+                  <option value="Call during working hours">Call during working hours</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="Email">Email</option>
+                  <option value="SMS">SMS</option>
+                </select>
               </div>
 
               <div class="field full">
@@ -1252,6 +1240,7 @@
               <div class="checkboxes">
                 <label class="check"><input type="checkbox" name="same_day_turnaround" value="Yes"><span>Same-day turnaround requested (+£19.99), subject to booking and inspection viability.</span></label>
                 <label class="check"><input type="checkbox" name="preventative_reliability_package" value="Yes"><span>Preventative Reliability Package requested (+£29.99).</span></label>
+                <label class="check"><input type="checkbox" name="complete_vehicle_service" value="Yes"><span>I want to enquire about the complete vehicle remove, repair and refit option (£799 total).</span></label>
                 <label class="check"><input type="checkbox" name="shipping_acknowledgement" value="Accepted" required><span>I understand that I choose the courier, I am responsible for sending the unit and I must provide a prepaid return label.</span></label>
                 <label class="check"><input type="checkbox" name="tamper_disclosure_confirmation" value="Confirmed" required><span>I confirm that any previous opening, tampering or previous repair work on the unit has been declared truthfully and I understand acceptance is subject to inspection.</span></label>
               </div>

@@ -291,9 +291,17 @@
     }
 
     .hero-copy h1 {
-      max-width: 8.2ch;
+      max-width: none;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
       text-align: center;
-      text-wrap: balance;
+      line-height: 0.98;
+    }
+
+    .hero-copy h1 .hero-line {
+      display: block;
+      text-align: center;
     }
 
     .hero-actions {
@@ -945,7 +953,7 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <span class="eyebrow">VW Audi Seat Skoda DSG7 specialist</span>
-            <h1>DQ200 No Communication Repair</h1>
+            <h1><span class="hero-line">DQ200 No</span><span class="hero-line">Communication</span><span class="hero-line">Repair</span></h1>
             <p class="lead">If your VW, Audi, Seat or Skoda has a DQ200 / 0AM / 0CW gearbox fault and the transmission control module cannot communicate, this service is built for that exact problem. Clear pricing, free testing and a straightforward process from booking to return.</p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#contact">Book Your Free Test Now</a>

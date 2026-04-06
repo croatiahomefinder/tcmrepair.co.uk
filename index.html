@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DQ200 TCM No Communication Repair | Mail-In DSG7 Repair UK | Kovac Services Ltd</title>
+  <title>DQ200 No Communication Repair | Fixed Price £149 | Kovac Services Ltd</title>
   <meta
     name="description"
-    content="Mail-in DQ200 TCM no communication repair for VW, Audi, SEAT and Skoda DSG7 gearboxes. Fixed price £149, free testing, no repair no fee, standard 2 to 5 working day turnaround, next working day option +£19.99."
+    content="DQ200 no communication repair for VW, Audi, Seat and Skoda DSG7 gearboxes. Fixed price £149, free testing, no repair no fee, same-day option, complete vehicle option and UK-wide postal service from Kovac Services Ltd."
+  />
+  <meta
+    name="keywords"
+    content="DQ200 no communication repair, DQ200 TCM repair, DSG7 TCM repair, DQ200 transmission control module repair, no communication TCM repair, DQ200 mechatronic no communication, U0101, P1604, P0562"
   />
   <meta name="robots" content="index,follow" />
   <meta name="theme-color" content="#f4f5f7" />
@@ -16,7 +20,6 @@
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="canonical" href="https://www.kslimited.co.uk/dq200-no-communication-repair" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -42,17 +45,22 @@
       --brand-dark: #0b5a80;
       --brand-soft: #eafaff;
       --success: #1f9d5c;
-      --warning-bg: #fff7ef;
-      --warning-line: #f0d7bc;
-      --warning-text: #7c4b26;
+      --warning-bg: #fff3f0;
+      --warning-line: #efc6bb;
+      --warning-text: #8b4b3a;
       --shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
       --shadow-soft: 0 8px 18px rgba(15, 23, 42, 0.05);
-      --radius: 24px;
+      --radius: 26px;
       --max: 1220px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -119,14 +127,23 @@
     h3,
     h4 {
       margin: 0 0 14px;
-      line-height: 1.08;
+      line-height: 1.06;
       letter-spacing: -0.04em;
       color: var(--navy);
     }
 
-    h1 { font-size: clamp(2.35rem, 6vw, 4.7rem); }
-    h2 { font-size: clamp(1.9rem, 4vw, 3rem); max-width: 14ch; }
-    h3 { font-size: clamp(1.15rem, 2vw, 1.45rem); }
+    h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      max-width: 12ch;
+    }
+
+    h3 {
+      font-size: clamp(1.18rem, 2vw, 1.5rem);
+    }
 
     p {
       margin: 0 0 16px;
@@ -134,7 +151,10 @@
     }
 
     .lead {
-      max-width: 42rem;
+      max-width: 34rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
       font-size: clamp(1.02rem, 2vw, 1.16rem);
       color: #3a4453;
     }
@@ -144,23 +164,12 @@
       color: var(--muted-2);
     }
 
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      border: 0;
-    }
-
     .nav-shell {
       position: sticky;
       top: 0;
       z-index: 50;
       padding: 14px 0;
-      background: rgba(243, 245, 247, 0.92);
+      background: rgba(243, 245, 247, 0.9);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(207, 215, 224, 0.8);
     }
@@ -230,11 +239,16 @@
       text-align: center;
     }
 
-    .nav-links a:hover,
-    .nav-links a:focus-visible {
+    .nav-links a:hover {
       border-color: #c3d8ea;
       transform: translateY(-1px);
       box-shadow: var(--shadow-soft);
+    }
+
+    .nav-links a.is-active {
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
     }
 
     .btn {
@@ -251,8 +265,7 @@
       text-align: center;
     }
 
-    .btn:hover,
-    .btn:focus-visible {
+    .btn:hover {
       transform: translateY(-1px);
     }
 
@@ -275,12 +288,12 @@
     }
 
     .hero {
-      padding: 40px 0 26px;
+      padding: 44px 0 26px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
       gap: 24px;
       align-items: stretch;
     }
@@ -288,7 +301,7 @@
     .card,
     .hero-copy,
     .hero-media,
-    .strip,
+    .pricing-strip,
     .symptom-card,
     .process-band,
     .gallery-card,
@@ -296,12 +309,8 @@
     .contact-shell,
     .find-us,
     .code-chip,
-    .trust-card,
-    .review-card,
-    .case-card,
-    .warranty-box,
-    .about-card {
-      background: rgba(255, 255, 255, 0.92);
+    .vehicle-service-note {
+      background: rgba(255, 255, 255, 0.9);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
@@ -315,11 +324,7 @@
     .process-band,
     .gallery-card,
     .code-chip,
-    .trust-card,
-    .review-card,
-    .case-card,
-    .warranty-box,
-    .about-card {
+    .vehicle-service-note {
       padding: clamp(22px, 3vw, 34px);
     }
 
@@ -327,15 +332,31 @@
       background:
         radial-gradient(circle at top right, rgba(17, 197, 248, 0.16), transparent 22%),
         linear-gradient(180deg, #ffffff, #f9fbfd);
+      text-align: center;
       display: flex;
       flex-direction: column;
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      text-align: left;
     }
 
-    .hero-copy .lead {
-      margin-bottom: 0;
+    .hero-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 18px;
+      line-height: 0.96;
+      text-align: center;
+    }
+
+    .hero-line {
+      display: block;
+      text-align: center;
+    }
+
+    .hero-line-mid {
+      position: relative;
+      left: -0.09em;
     }
 
     .hero-actions {
@@ -343,35 +364,7 @@
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 24px;
-    }
-
-    .hero-points {
-      display: grid;
-      gap: 10px;
-      margin: 22px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .hero-points li,
-    .bullet-list li,
-    .contact-list li,
-    .faq-answer li {
-      position: relative;
-      padding-left: 28px;
-      color: #334155;
-    }
-
-    .hero-points li::before,
-    .bullet-list li::before,
-    .contact-list li::before,
-    .faq-answer li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--success);
-      font-weight: 800;
+      justify-content: center;
     }
 
     .hero-media {
@@ -383,15 +376,16 @@
       background: linear-gradient(180deg, #ffffff, #f7fafc);
     }
 
-    .media-shell {
+    .hero-media .media-shell {
+      margin-top: 0;
       width: 100%;
-      border-radius: 22px;
+      border-radius: 24px;
       overflow: hidden;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, #f7fafc, #eef3f7);
     }
 
-    .media-image {
+    .hero-media .media-image {
       width: 100%;
       height: 100%;
       min-height: 420px;
@@ -399,16 +393,16 @@
       display: block;
     }
 
-    .strip {
+    .pricing-strip {
       margin-top: 24px;
       padding: 18px;
       display: grid;
       gap: 16px;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(6, minmax(0, 1fr));
       background: rgba(255, 255, 255, 0.75);
     }
 
-    .strip-card {
+    .pricing-tile {
       padding: 22px 18px;
       border-radius: 22px;
       background: #ffffff;
@@ -417,19 +411,48 @@
       box-shadow: var(--shadow-soft);
     }
 
-    .strip-card strong {
+    .pricing-tile strong {
       display: block;
-      font-size: 1.3rem;
+      font-size: 1.45rem;
       color: var(--navy);
       margin-bottom: 6px;
       letter-spacing: -0.03em;
     }
 
-    .strip-card span {
+    .pricing-tile span {
       display: block;
       color: var(--muted);
       font-size: 0.95rem;
       line-height: 1.45;
+    }
+
+    .vehicle-service-note {
+      margin-top: 18px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background: linear-gradient(180deg, #ffffff, #f8fbfd);
+    }
+
+    .vehicle-service-note strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.22rem;
+      margin-bottom: 4px;
+      letter-spacing: -0.03em;
+    }
+
+    .vehicle-price {
+      padding: 14px 18px;
+      border-radius: 16px;
+      background: var(--brand-soft);
+      border: 1px solid #bfeeff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--brand-dark);
+      white-space: nowrap;
     }
 
     .section-head {
@@ -447,17 +470,21 @@
     }
 
     .grid-2,
-    .grid-3,
-    .grid-4 {
+    .grid-3 {
       display: grid;
       gap: 20px;
     }
 
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-    .bullet-list,
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .clean-list,
+    .icon-list,
     .contact-list,
     .faq-answer ul {
       list-style: none;
@@ -467,35 +494,42 @@
       gap: 12px;
     }
 
-    .code-chip strong,
-    .review-card strong,
-    .case-card strong,
-    .trust-card strong,
-    .about-card strong,
-    .warranty-box strong {
+    .clean-list li,
+    .icon-list li,
+    .contact-list li,
+    .faq-answer li {
+      position: relative;
+      padding-left: 28px;
+      color: #334155;
+    }
+
+    .clean-list li::before,
+    .icon-list li::before,
+    .contact-list li::before,
+    .faq-answer li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--success);
+      font-weight: 800;
+    }
+
+    .symptom-card h3,
+    .gallery-card h3,
+    .card h3,
+    .process-band h3,
+    .contact-shell h3,
+    .find-us h3 {
+      margin-bottom: 12px;
+    }
+
+    .code-chip strong {
       display: block;
+      font-size: 1.25rem;
       color: var(--navy);
-      font-size: 1.1rem;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       letter-spacing: -0.03em;
-    }
-
-    .code-stack {
-      display: grid;
-      gap: 14px;
-    }
-
-    .code-chip {
-      padding: 18px 20px;
-    }
-
-    .code-chip p,
-    .review-card p,
-    .case-card p,
-    .trust-card p,
-    .about-card p,
-    .warranty-box p {
-      margin-bottom: 0;
     }
 
     .process-stack {
@@ -535,11 +569,11 @@
     }
 
     .mini-step {
-      padding: 16px 14px;
+      padding: 15px 14px;
       border-radius: 18px;
       border: 1px solid var(--line);
       background: #fafbfd;
-      min-height: 126px;
+      min-height: 118px;
     }
 
     .mini-step-number {
@@ -559,7 +593,7 @@
     .mini-step strong {
       display: block;
       color: var(--navy);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       font-size: 0.98rem;
       line-height: 1.2;
     }
@@ -570,27 +604,47 @@
       line-height: 1.45;
     }
 
-    .warning-box,
-    .notice-pill,
-    .visit-note {
-      padding: 18px;
-      border-radius: 20px;
-      border: 1px solid var(--warning-line);
+    .shipping-box {
+      margin-top: 22px;
+      padding: 22px;
+      border-radius: 24px;
       background: var(--warning-bg);
-      color: var(--warning-text);
+      border: 1px solid var(--warning-line);
     }
 
-    .warning-box h3,
-    .notice-pill strong,
-    .visit-note strong {
+    .shipping-box h3 {
       color: #6d392c;
     }
 
-    .warning-box p,
-    .warning-box li,
-    .notice-pill,
-    .visit-note {
+    .shipping-box p,
+    .shipping-box li {
       color: var(--warning-text);
+    }
+
+    .gallery-grid {
+      margin-top: 0;
+    }
+
+    .gallery-card {
+      padding-top: 18px;
+    }
+
+    .gallery-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .media-shell {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f7fafc, #eef3f7);
+    }
+
+    .media-image {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
     }
 
     .faq-list {
@@ -641,12 +695,21 @@
       padding: 0 24px 22px;
     }
 
-    .about-grid,
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.98fr);
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
       gap: 22px;
       align-items: start;
+    }
+
+    .notice-pill {
+      padding: 16px 18px;
+      border-radius: 20px;
+      border: 1px solid #ead9c7;
+      background: #fff7ef;
+      color: #765036;
+      margin-bottom: 20px;
+      font-weight: 500;
     }
 
     form {
@@ -658,6 +721,13 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
+    }
+
+    .field,
+    .check {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: #ffffff;
     }
 
     .field {
@@ -715,9 +785,6 @@
       grid-template-columns: auto 1fr;
       gap: 12px;
       align-items: start;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: #ffffff;
       box-shadow: var(--shadow-soft);
     }
 
@@ -735,11 +802,35 @@
       margin-top: 4px;
     }
 
+    .find-us .map-shell {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      margin: 14px 0 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .map-embed {
+      width: 100%;
+      min-height: 250px;
+      border: 0;
+      display: block;
+    }
+
+    .visit-note {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid var(--warning-line);
+      background: var(--warning-bg);
+      color: var(--warning-text);
+      margin-bottom: 18px;
+    }
+
     .contact-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 18px 0;
+      margin: 18px 0 18px;
     }
 
     .pill {
@@ -771,13 +862,15 @@
       color: #374151;
     }
 
-    .hours-row:last-child { border-bottom: 0; }
+    .hours-row:last-child {
+      border-bottom: 0;
+    }
 
     .footer {
       padding: 28px 0 100px;
       color: var(--muted);
       border-top: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.65);
+      background: rgba(255, 255, 255, 0.6);
     }
 
     .footer-grid {
@@ -805,7 +898,7 @@
       gap: 10px;
       padding: 12px;
       border-radius: 22px;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.92);
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       backdrop-filter: blur(12px);
@@ -831,28 +924,29 @@
       }
 
       .hero-grid,
-      .about-grid,
       .contact-grid,
-      .grid-4,
+      .pricing-strip,
       .grid-3,
       .grid-2,
-      .strip,
       .process-mini-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 760px) {
-      .section { padding: 56px 0; }
-      .hero { padding-top: 28px; }
+      .section {
+        padding: 56px 0;
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
 
       .hero-grid,
-      .about-grid,
       .contact-grid,
-      .grid-4,
+      .pricing-strip,
       .grid-3,
       .grid-2,
-      .strip,
       .process-mini-grid,
       .form-grid,
       .footer-grid {
@@ -864,121 +958,77 @@
         align-items: start;
       }
 
-      .hero-copy { text-align: left; }
-      .mobile-bar { display: grid; }
-      .footer { padding-bottom: 100px; }
-      .media-image { min-height: 300px; }
+      .mobile-bar {
+        display: grid;
+      }
+
+      .footer {
+        padding-bottom: 100px;
+      }
+
+      .hero-media .media-image {
+        min-height: 300px;
+      }
+
+      .vehicle-service-note {
+        align-items: start;
+      }
     }
   </style>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Kovac Services Ltd",
-      "url": "https://www.kslimited.co.uk/dq200-no-communication-repair",
-      "telephone": "+447833823384",
-      "email": "info@kslimited.co.uk",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Unit F, Leona Trading Estate, Nimmings Road",
-        "addressLocality": "Halesowen",
-        "postalCode": "B62 9JQ",
-        "addressCountry": "GB"
-      },
-      "areaServed": "GB",
-      "description": "Mail-in DQ200 TCM no communication repair for VW, Audi, SEAT and Skoda DSG7 gearboxes.",
-      "serviceType": "DQ200 TCM no communication repair",
-      "openingHours": "Mo-Fr 09:00-18:00"
-    }
-  </script>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What does the £149 service include?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The £149 covers inspection, testing and repair of the DQ200 TCM no communication fault where viable. Return shipping remains the customer's responsibility."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the turnaround time?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Standard turnaround is 2 to 5 working days. A next working day option is available for an extra £19.99, subject to booking and inspection viability."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I send the module by post?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. This page is specifically for a mail-in service or for customers bringing us the TCM module directly."
-          }
-        }
-      ]
-    }
-  </script>
 </head>
 <body>
-  <a class="sr-only" href="#main-content">Skip to main content</a>
-
   <div class="nav-shell">
     <div class="container nav">
-      <a class="brand" href="#top" aria-label="Kovac Services Ltd home">
+      <a class="brand" href="#home" aria-label="Kovac Services Ltd home">
         <div class="brand-mark">KS</div>
         <div class="brand-copy">
           <strong>Kovac Services Ltd</strong>
-          <span>DQ200 TCM No Communication Repair</span>
+          <span>DQ200 TCM No Communication Specialist</span>
         </div>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="#service">Service</a>
-        <a href="#symptoms">Symptoms</a>
+        <a class="is-active" href="#home">Home</a>
+        <a href="#diagnosis">Symptoms</a>
+        <a href="#pricing">Pricing</a>
         <a href="#process">Process</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </div>
 
-  <main id="main-content">
-    <section class="hero" id="top">
+  <main id="home">
+    <section class="hero">
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">Mail-in DSG7 repair service</span>
-            <h1>DQ200 TCM No Communication Repair</h1>
+            <span class="eyebrow">VW Audi Seat Skoda DSG7 specialist</span>
+
+            <h1 class="hero-title">
+              <span class="hero-line">DQ200 No</span>
+              <span class="hero-line hero-line-mid">Communication</span>
+              <span class="hero-line">Repair</span>
+            </h1>
+
             <p class="lead">
-              Mail-in DQ200 / 0AM / 0CW TCM repair for VW, Audi, SEAT and Skoda vehicles with no communication faults. This page is built for one job only: customers sending in a faulty module or bringing us the TCM itself for testing and repair.
+              If your VW, Audi, Seat or Skoda has a DQ200 / 0AM / 0CW gearbox fault and the
+              transmission control module cannot communicate, this service is built for that exact
+              problem. Clear pricing, free testing and a straightforward process from booking to
+              return.
             </p>
 
-            <ul class="hero-points">
-              <li>Fixed repair price of £149</li>
-              <li>Free testing for this fault path</li>
-              <li>No repair, no fee</li>
-              <li>Standard turnaround 2 to 5 working days</li>
-              <li>Next working day option +£19.99</li>
-            </ul>
-
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contact">Book Your Repair</a>
-              <a class="btn btn-secondary" href="tel:07833823384">Call 0783 382 3384</a>
+              <a class="btn btn-primary" href="#contact">Book Your Free Test Now</a>
+              <a class="btn btn-secondary" href="#process">View Process</a>
             </div>
           </div>
 
-          <aside class="hero-media" aria-label="DQ200 TCM repair image">
+          <aside class="hero-media" aria-label="DQ200 TCM hero image">
             <div class="media-shell">
               <img
                 src="hero.png"
-                alt="Real DQ200 TCM repair bench setup at Kovac Services workshop"
+                alt="DQ200 TCM repair bench setup"
                 class="media-image"
                 loading="eager"
               />
@@ -986,133 +1036,72 @@
           </aside>
         </div>
 
-        <div class="strip" id="service">
-          <div class="strip-card">
-            <strong>£149</strong>
-            <span>Fixed price repair</span>
-          </div>
-          <div class="strip-card">
-            <strong>2 to 5 days</strong>
-            <span>Standard lead time</span>
-          </div>
-          <div class="strip-card">
-            <strong>+£19.99</strong>
-            <span>Next working day option</span>
-          </div>
-          <div class="strip-card">
-            <strong>Mail-in or drop off</strong>
-            <span>Send the TCM or bring us the module</span>
-          </div>
+        <div class="pricing-strip" id="pricing">
+          <div class="pricing-tile"><strong>£149</strong><span>Fixed price repair</span></div>
+          <div class="pricing-tile"><strong>Free</strong><span>Testing included</span></div>
+          <div class="pricing-tile"><strong>No repair</strong><span>No fee</span></div>
+          <div class="pricing-tile"><strong>95%</strong><span>Success rate</span></div>
+          <div class="pricing-tile"><strong>+£19.99</strong><span>Same-day turnaround</span></div>
+          <div class="pricing-tile"><strong>+£29.99</strong><span>Reliability package</span></div>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section-head">
+        <div class="vehicle-service-note">
           <div>
-            <span class="eyebrow">About Kovac Services</span>
-            <h2>Specialist repair page with a clear purpose.</h2>
-          </div>
-          <p>
-            This is not a general gearbox page and not a catch-all brochure. It is a focused service page for DQ200 TCM no communication faults, written for people who already have that exact problem.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-card">
-            <strong>Why customers land here</strong>
+            <strong>Complete vehicle service available</strong>
             <p>
-              Most people arriving on this page are searching for terms like DQ200 no communication repair, DSG7 TCM repair, 0AM TCM fault, U0101, P1604 or P0562. The page stays tightly focused on that fault pattern so the customer immediately knows they are in the right place.
+              You can also bring the complete vehicle to us. We can remove, inspect, repair and
+              refit the module to the vehicle.
             </p>
           </div>
-
-          <div class="about-card">
-            <strong>What makes the page useful</strong>
-            <p>
-              It explains the symptoms, shows real workshop images, sets out pricing and turnaround clearly, shows how the mail-in process works, and gives obvious contact routes without burying the important details behind gimmicks.
-            </p>
-          </div>
+          <div class="vehicle-price">£799 total</div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="symptoms">
+    <section class="section" id="diagnosis">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Symptoms and fault codes</span>
-            <h2>Common signs of a DQ200 TCM no communication fault.</h2>
+            <h2>Common signs of a DQ200 no communication fault.</h2>
           </div>
-          <p>
-            These are the symptoms customers usually report before sending the module in for testing.
-          </p>
+          <p>Typical symptoms, dashboard behaviour and fault codes associated with this problem.</p>
         </div>
 
         <div class="grid-2">
           <div class="symptom-card">
             <h3>Typical symptoms</h3>
-            <ul class="bullet-list">
-              <li>No communication with transmission control module</li>
-              <li>Gearbox warning light or transmission warning message</li>
+            <ul class="icon-list">
+              <li>No communication with TCM</li>
+              <li>No start</li>
+              <li>Loss of drive</li>
+              <li>Gearbox or transmission warning lights</li>
+              <li>Fault messages on the dash</li>
+              <li>Intermittent or complete controller silence</li>
               <li>PRNDS flashing on the dashboard</li>
               <li>Gear indicator missing or blank</li>
-              <li>Vehicle may not start or may lose drive</li>
               <li>Diagnostic tools cannot detect the TCM</li>
-              <li>Intermittent communication that later becomes complete silence</li>
+              <li>Communication faults stored alongside module faults</li>
             </ul>
           </div>
 
           <div class="card">
             <h3>Common fault codes</h3>
-            <div class="code-stack">
-              <div class="code-chip">
+            <div style="display:grid; gap:14px;">
+              <div class="code-chip" style="padding:18px 20px;">
                 <strong>U0101</strong>
-                <p>Lost communication with TCM</p>
+                <p>Lost Communication with TCM</p>
               </div>
-              <div class="code-chip">
+              <div class="code-chip" style="padding:18px 20px;">
                 <strong>P1604</strong>
-                <p>Internal control module malfunction</p>
+                <p>Internal Control Module Malfunction</p>
               </div>
-              <div class="code-chip">
+              <div class="code-chip" style="padding:18px 20px;">
                 <strong>P0562</strong>
-                <p>System voltage low</p>
+                <p>System Voltage Low</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="trust">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Why choose us</span>
-            <h2>Useful detail, not fluff.</h2>
-          </div>
-          <p>
-            Customers need straight answers, not smoke machines and flying glitter. These are the basics that matter.
-          </p>
-        </div>
-
-        <div class="grid-4">
-          <article class="trust-card">
-            <strong>Focused service</strong>
-            <p>This page is for DQ200 TCM no communication faults only, so the message stays clear.</p>
-          </article>
-          <article class="trust-card">
-            <strong>Real workshop images</strong>
-            <p>Use your own repair bench and PCB photos to show the work, not stock-photo theatre.</p>
-          </article>
-          <article class="trust-card">
-            <strong>Clear turnaround</strong>
-            <p>Standard 2 to 5 working days, or next working day for +£19.99 where viable.</p>
-          </article>
-          <article class="trust-card">
-            <strong>Clear contact routes</strong>
-            <p>Call, WhatsApp or submit the form without hunting through the page like a lost screwdriver.</p>
-          </article>
         </div>
       </div>
     </section>
@@ -1122,9 +1111,9 @@
         <div class="section-head">
           <div>
             <span class="eyebrow">Process</span>
-            <h2>How the mail-in repair service works.</h2>
+            <h2>How the service works.</h2>
           </div>
-          <p>Simple steps for customers sending the module by post or bringing the TCM in directly.</p>
+          <p>From removal and packing to inspection, repair and return.</p>
         </div>
 
         <div class="process-stack">
@@ -1137,23 +1126,44 @@
             <div class="process-mini-grid">
               <div class="mini-step">
                 <div class="mini-step-number">1</div>
-                <strong>Remove the TCM</strong>
-                <p>Remove the DQ200 transmission control module from the mechatronic unit.</p>
+                <strong>Remove the module</strong>
+                <p>Remove the transmission control module from the mechatronic unit.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">2</div>
-                <strong>Clean and dry it</strong>
+                <strong>Clean the module</strong>
                 <p>Make sure the outside is clean and dry before packing.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">3</div>
-                <strong>Pack it properly</strong>
-                <p>Use bubble wrap and a sturdy box, not a thin bag or padded envelope.</p>
+                <strong>Wrap it properly</strong>
+                <p>Use bubble wrap generously to protect it from impact.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">4</div>
+                <strong>Use a sturdy box</strong>
+                <p>Do not send it in a thin bag or lightly padded envelope.</p>
+              </div>
+
+              <div class="mini-step">
+                <div class="mini-step-number">5</div>
                 <strong>Include your details</strong>
-                <p>Add your name, number, vehicle details, mileage and any fault codes.</p>
+                <p>Add contact details, vehicle details and mileage.</p>
+              </div>
+
+              <div class="mini-step">
+                <div class="mini-step-number">6</div>
+                <strong>Include DTCs if available</strong>
+                <p>Add any fault codes you have already read from the car.</p>
+              </div>
+
+              <div class="mini-step">
+                <div class="mini-step-number">7</div>
+                <strong>Add return label and send</strong>
+                <p>Include a prepaid return label and send with your chosen courier.</p>
               </div>
             </div>
           </div>
@@ -1167,36 +1177,54 @@
             <div class="process-mini-grid">
               <div class="mini-step">
                 <div class="mini-step-number">1</div>
-                <strong>Receive and log</strong>
-                <p>We book the module in and check the information supplied.</p>
+                <strong>Receive</strong>
+                <p>We receive the unit and log it in.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">2</div>
-                <strong>Inspect and test</strong>
-                <p>We assess condition, signs of prior repair and viability.</p>
+                <strong>Inspect</strong>
+                <p>We inspect condition, prior opening and repair viability.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">3</div>
-                <strong>Repair where viable</strong>
-                <p>We carry out the DQ200 no communication repair and verify communication.</p>
+                <strong>Repair</strong>
+                <p>Where viable, we carry out the no communication repair.</p>
               </div>
+
               <div class="mini-step">
                 <div class="mini-step-number">4</div>
-                <strong>Return the unit</strong>
-                <p>Standard lead time is 2 to 5 working days, or next working day if booked and viable.</p>
+                <strong>Test</strong>
+                <p>The unit is tested to confirm communication and service outcome.</p>
+              </div>
+
+              <div class="mini-step">
+                <div class="mini-step-number">5</div>
+                <strong>Report and payment</strong>
+                <p>We confirm the result and arrange payment once the outcome is known.</p>
+              </div>
+
+              <div class="mini-step">
+                <div class="mini-step-number">6</div>
+                <strong>Return</strong>
+                <p>The unit is sent back using the prepaid return label provided.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="warning-box" style="margin-top:22px;">
-          <h3>Shipping and packing</h3>
-          <ul class="bullet-list">
-            <li>Customer chooses the courier and pays for shipping both ways</li>
+        <div class="shipping-box">
+          <h3>Shipping and packing responsibility</h3>
+          <ul class="clean-list">
+            <li>Customer chooses the courier</li>
+            <li>Customer is responsible for sending the unit to us</li>
+            <li>Customer must provide a prepaid return label</li>
+            <li>We are not liable for loss, damage, delay or destruction in transit</li>
             <li>Units must be packed properly before dispatch</li>
-            <li>Previously opened or previously repaired units must be declared</li>
+            <li>Previously opened, tampered or previously repaired units must be declared</li>
             <li>Acceptance is subject to inspection</li>
-            <li>We are not liable for parcel loss, delay or courier damage in transit</li>
+            <li>Some units may be refused if prior damage or poor previous repair affects viability</li>
           </ul>
         </div>
       </div>
@@ -1204,21 +1232,13 @@
 
     <section class="section" id="gallery">
       <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Real workshop images</span>
-            <h2>Use actual photos of your repair work.</h2>
-          </div>
-          <p>These image blocks support trust and help Google understand the page is grounded in real first-hand work.</p>
-        </div>
-
-        <div class="grid-3">
+        <div class="grid-3 gallery-grid">
           <article class="gallery-card">
-            <h3>DQ200 TCM module</h3>
+            <h3>DQ200 TCM Module</h3>
             <div class="media-shell">
               <img
                 src="dq200-tcm-angle-variant.jpg"
-                alt="Real DQ200 TCM module photographed at Kovac Services"
+                alt="DQ200 TCM module"
                 class="media-image"
                 loading="lazy"
               />
@@ -1226,11 +1246,11 @@
           </article>
 
           <article class="gallery-card">
-            <h3>DQ200 PCB inspection</h3>
+            <h3>DQ200 TCM PCB board</h3>
             <div class="media-shell">
               <img
                 src="dq200-tcm-topside-variant.jpg"
-                alt="DQ200 TCM PCB inspection on the workbench"
+                alt="DQ200 TCM PCB board"
                 class="media-image"
                 loading="lazy"
               />
@@ -1238,89 +1258,16 @@
           </article>
 
           <article class="gallery-card">
-            <h3>DQ200 board underside</h3>
+            <h3>DQ200 TCM Underside</h3>
             <div class="media-shell">
               <img
                 src="dq200-tcm-underside-variant.jpg"
-                alt="Underside of DQ200 TCM board during repair inspection"
+                alt="DQ200 TCM underside"
                 class="media-image"
                 loading="lazy"
               />
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="case-studies">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Case studies / recent jobs</span>
-            <h2>Show recent repair examples.</h2>
-          </div>
-          <p>These short case studies help the page feel lived-in instead of mass-produced.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="case-card">
-            <strong>2014 Audi A3 1.6 TDI</strong>
-            <p>Customer reported no communication with TCM, flashing PRNDS and no drive selection. Module sent in by post, tested, repaired and returned after successful communication checks.</p>
-          </article>
-          <article class="case-card">
-            <strong>2015 VW Golf 1.4 TSI</strong>
-            <p>Intermittent TCM communication fault progressed to full loss of communication. Customer included DTCs and vehicle details, which sped up diagnosis and turnaround.</p>
-          </article>
-          <article class="case-card">
-            <strong>2013 Skoda Octavia DSG7</strong>
-            <p>Module arrived well packed with clear symptom notes and was processed through the standard repair workflow. Good case-study material for a future before-and-after write-up.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="reviews">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Reviews / testimonials</span>
-            <h2>Let customers do some of the talking.</h2>
-          </div>
-          <p>Add real reviews from Google, Facebook or direct customer messages. Replace these placeholders with genuine wording only.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="review-card">
-            <strong>Fast and clear communication</strong>
-            <p>“Sent the DQ200 module in after losing communication with the gearbox ECU. Clear advice, no nonsense, and the unit came back sorted.”</p>
-          </article>
-          <article class="review-card">
-            <strong>Exactly the fault I had</strong>
-            <p>“Found this page while searching for DQ200 no communication repair. The symptoms matched my car almost exactly, which gave me confidence to send the module in.”</p>
-          </article>
-          <article class="review-card">
-            <strong>Useful instead of vague</strong>
-            <p>“Straight pricing, proper contact details, and an explanation of what to send. Felt like dealing with a real workshop rather than a generic marketing shell.”</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="warranty">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <span class="eyebrow">Warranty / guarantee</span>
-            <h2>Set expectations clearly.</h2>
-          </div>
-          <p>Do not waffle here. State what is covered, what is not, and any conditions. Replace this sample wording with your real policy.</p>
-        </div>
-
-        <div class="warranty-box">
-          <strong>Sample wording to replace with your actual policy</strong>
-          <p>
-            Repaired units are covered against the original no communication fault for the warranty period stated by Kovac Services Ltd. This does not cover unrelated vehicle faults, wiring issues, low voltage faults, water ingress, physical damage, tampering after repair, or incorrect installation.
-          </p>
         </div>
       </div>
     </section>
@@ -1332,87 +1279,121 @@
             <span class="eyebrow">FAQ</span>
             <h2>Frequently asked questions.</h2>
           </div>
-          <p>Answers to the questions most people ask before sending the module.</p>
+          <p>Key details before you send your unit.</p>
         </div>
 
         <div class="faq-list">
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
+            <button class="faq-question" type="button">
               <span>What does the £149 include?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <p>
-                  The £149 covers the fixed price DQ200 TCM no communication repair, including inspection and testing for this fault path. Shipping remains the customer’s responsibility.
+                  The £149 covers the fixed price DQ200 no communication repair service, including
+                  inspection and testing for this specific fault. Shipping remains the customer’s
+                  responsibility.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What is the turnaround time?</span><span>+</span>
+            <button class="faq-question" type="button">
+              <span>What if it cannot be repaired?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <p>
-                  Standard lead time is 2 to 5 working days. A next working day option is available for an extra £19.99, subject to booking, arrival time and inspection viability.
+                  If the unit is not repairable, there is no repair charge. The customer only
+                  covers shipping and must provide a prepaid return label.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>Can I send the module by post?</span><span>+</span>
+            <button class="faq-question" type="button">
+              <span>What is the same-day option?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <p>
-                  Yes. This page is specifically for a mail-in service or for customers bringing us the TCM itself. The whole-car option has been removed from this page to keep the offer clear.
+                  The same-day turnaround option is an additional +£19.99, subject to booking,
+                  arrival time and inspection viability.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What if the unit cannot be repaired?</span><span>+</span>
+            <button class="faq-question" type="button">
+              <span>What is the Preventative Reliability Package?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <p>
-                  If the unit is not repairable for this service, there is no repair charge. The customer still covers shipping.
+                  This is an optional +£29.99 add-on for customers who want extra attention to
+                  known age and factory-related weak points while the unit is already with us.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
+            <button class="faq-question" type="button">
               <span>Do you accept previously repaired units?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
                 <p>
-                  Previously opened, tampered or previously repaired units must be declared in advance. Acceptance is subject to inspection and some units may be refused if earlier damage affects viability.
+                  Previously opened, tampered or previously repaired units must be declared in
+                  advance. Acceptance is subject to inspection, and some units may be refused if
+                  earlier damage or poor previous repair affects viability.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="faq-item">
-            <button class="faq-question" type="button" aria-expanded="false">
-              <span>What should I include with the parcel?</span><span>+</span>
+            <button class="faq-question" type="button">
+              <span>Who is responsible for shipping?</span><span>+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                <ul>
-                  <li>Your full name and phone number</li>
-                  <li>Vehicle registration and mileage</li>
-                  <li>Vehicle / gearbox / module details</li>
-                  <li>Fault description and any DTCs you already have</li>
-                </ul>
+                <p>
+                  The customer chooses the courier, is responsible for sending the unit to us and
+                  must provide a prepaid return label. We are not liable for loss, damage, delay or
+                  destruction in transit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Can I bring the complete vehicle instead of just the module?</span><span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Yes. We can also have the complete vehicle with us, remove the module, inspect
+                  it, repair it where viable and refit it to the vehicle for a total of £799.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span>Do I need to book in advance?</span><span>+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>
+                  Booking first is recommended so we can expect the parcel and confirm options such
+                  as same-day turnaround.
+                </p>
               </div>
             </div>
           </div>
@@ -1424,23 +1405,24 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Contact</span>
-            <h2>Book your DQ200 TCM repair.</h2>
+            <span class="eyebrow">Bookings and contact</span>
+            <h2>Book your free test or send an enquiry.</h2>
           </div>
           <p>
-            Send the module details, symptoms and your preferred contact method. We will reply during opening hours.
+            Send the unit details, symptoms and your preferred contact method. We will reply as soon
+            as possible during opening hours.
           </p>
         </div>
 
         <div class="contact-grid">
           <div class="contact-shell">
             <div class="notice-pill">
-              <strong>Mail-in or bring the TCM only</strong><br />
-              This booking form is for the DQ200 TCM module service. It does not offer whole-vehicle booking on this page.
+              Choose how you would like us to contact you back and we will use that method first
+              where possible during opening hours.
             </div>
 
             <form action="https://formspree.io/f/xdapdlnd" method="POST">
-              <input type="hidden" name="service" value="DQ200 TCM no communication repair enquiry" />
+              <input type="hidden" name="service" value="DQ200 no communication repair enquiry" />
 
               <div class="field full">
                 <label for="preferred-contact-method">Preferred contact method *</label>
@@ -1454,7 +1436,7 @@
               </div>
 
               <div class="field full">
-                <label for="contact-time">Best time to contact you *</label>
+                <label for="contact-time">Best time to contact you</label>
                 <select id="contact-time" name="best_time_to_contact" required>
                   <option value="ASAP">ASAP</option>
                   <option value="Morning">Morning</option>
@@ -1505,7 +1487,7 @@
                   <textarea
                     id="symptoms-text"
                     name="symptoms_description"
-                    placeholder="Describe the fault, warning lights, whether communication is intermittent or completely lost, and anything else useful."
+                    placeholder="Describe the fault, whether the car starts, what warning lights appear and whether communication is intermittent or completely lost."
                     required
                   ></textarea>
                 </div>
@@ -1522,24 +1504,57 @@
 
               <div class="checkboxes">
                 <label class="check">
-                  <input type="checkbox" name="next_working_day_service" value="Yes" />
-                  <span>Next working day turnaround requested (+£19.99), subject to booking and inspection viability.</span>
+                  <input type="checkbox" name="same_day_turnaround" value="Yes" />
+                  <span>
+                    Same-day turnaround requested (+£19.99), subject to booking and inspection
+                    viability.
+                  </span>
                 </label>
 
                 <label class="check">
-                  <input type="checkbox" name="shipping_acknowledgement" value="Accepted" required />
-                  <span>I understand that I am responsible for packing and shipping the module and that courier transit is my responsibility.</span>
+                  <input type="checkbox" name="preventative_reliability_package" value="Yes" />
+                  <span>Preventative Reliability Package requested (+£29.99).</span>
                 </label>
 
                 <label class="check">
-                  <input type="checkbox" name="tamper_disclosure_confirmation" value="Confirmed" required />
-                  <span>I confirm that any previous opening, tampering or prior repair work has been declared truthfully and I understand acceptance is subject to inspection.</span>
+                  <input type="checkbox" name="complete_vehicle_service" value="Yes" />
+                  <span>
+                    I want to enquire about the complete vehicle remove, repair and refit option
+                    (£799 total).
+                  </span>
+                </label>
+
+                <label class="check">
+                  <input
+                    type="checkbox"
+                    name="shipping_acknowledgement"
+                    value="Accepted"
+                    required
+                  />
+                  <span>
+                    I understand that I choose the courier, I am responsible for sending the unit
+                    and I must provide a prepaid return label.
+                  </span>
+                </label>
+
+                <label class="check">
+                  <input
+                    type="checkbox"
+                    name="tamper_disclosure_confirmation"
+                    value="Confirmed"
+                    required
+                  />
+                  <span>
+                    I confirm that any previous opening, tampering or previous repair work on the
+                    unit has been declared truthfully and I understand acceptance is subject to
+                    inspection.
+                  </span>
                 </label>
               </div>
 
               <div class="form-actions">
-                <button class="btn btn-primary" type="submit">Book Your Repair</button>
-                <p class="small">We will get back to you during opening hours.</p>
+                <button class="btn btn-primary" type="submit">Book Your Free Test Now</button>
+                <p class="small">We will get back to you as soon as possible during opening hours.</p>
               </div>
             </form>
           </div>
@@ -1547,28 +1562,47 @@
           <aside class="find-us">
             <h3>Kovac Services Ltd</h3>
             <p>
-              <strong style="color: var(--navy);">Unit F, Leona Trading Estate, Nimmings Road, Halesowen, B62 9JQ</strong>
-            </p>
-            <p>
-              Mail-in service available UK-wide. Customers can also bring the TCM module to us by appointment.
+              <strong style="color: var(--navy);">
+                Unit F, Leona Trading Estate, Nimmings Road, Halesowen, B62 9JQ
+              </strong>
             </p>
 
+            <div class="map-shell">
+              <iframe
+                class="map-embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=52.47251079517749,-2.032237813644786&z=17&output=embed"
+              ></iframe>
+            </div>
+
             <div class="visit-note">
-              <strong>By appointment</strong><br />
-              Please contact us before travelling to the workshop.
+              Visits are by appointment. Please contact us before travelling to the workshop.
             </div>
 
             <div class="contact-pills">
-              <a class="pill" href="tel:07833823384">Call: 0783 382 3384</a>
+              <a class="pill" href="tel:07833823384">Phone: 0783 382 3384</a>
               <a class="pill" href="https://wa.me/447833823384" target="_blank" rel="noopener">WhatsApp us</a>
-              <a class="pill" href="mailto:info@kslimited.co.uk">Email us</a>
+              <a class="pill" href="mailto:info@kslimited.co.uk">Email: info@kslimited.co.uk</a>
             </div>
 
             <ul class="contact-list">
-              <li>Website page focus: DQ200 TCM no communication repair</li>
-              <li>Mail-in service throughout the UK</li>
-              <li>Real workshop support and direct contact options</li>
+              <li>Facebook page: Kovac Services Automotive</li>
+              <li>UK-wide postal service available</li>
+              <li>Please include a prepaid return label with your parcel</li>
             </ul>
+
+            <div class="hero-actions" style="margin-top: 18px; justify-content: flex-start;">
+              <a
+                class="btn btn-outline"
+                href="https://www.google.com/maps?q=52.47251079517749,-2.032237813644786"
+                target="_blank"
+                rel="noopener"
+              >
+                Open in Maps
+              </a>
+            </div>
 
             <div class="hours">
               <div class="hours-row"><span>Monday to Friday</span><strong>09:00 to 18:00</strong></div>
@@ -1585,45 +1619,41 @@
     <div class="container footer-grid">
       <div>
         <strong style="display:block; color: var(--navy); margin-bottom: 6px;">Kovac Services Ltd</strong>
-        <span>DQ200 TCM No Communication Repair | Mail-in service | Fixed price £149</span>
+        <span>DQ200 No Communication Repair | Fixed price £149 | Free testing | No repair = no fee</span>
       </div>
 
       <div class="footer-links">
-        <a href="#top">Back to top</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Reviews</a>
+        <a href="#home">Back to top</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
-        <a href="/privacy-policy.html">Privacy Policy</a>
-        <a href="/terms-and-conditions.html">Terms</a>
       </div>
     </div>
   </footer>
 
   <div class="mobile-bar">
     <a class="btn btn-secondary" href="tel:07833823384">Call Now</a>
-    <a class="btn btn-primary" href="#contact">Book Repair</a>
+    <a class="btn btn-primary" href="#contact">Book Free Test</a>
   </div>
 
   <script>
-    document.querySelectorAll('.faq-question').forEach(function (button) {
-      button.addEventListener('click', function () {
+    document.querySelectorAll(".faq-question").forEach(function (button) {
+      button.addEventListener("click", function () {
         var item = button.parentElement;
-        var answer = item.querySelector('.faq-answer');
-        var icon = button.querySelector('span:last-child');
-        var isOpen = item.classList.contains('open');
+        var answer = item.querySelector(".faq-answer");
+        var icon = button.querySelector("span:last-child");
+        var isOpen = item.classList.contains("open");
 
-        document.querySelectorAll('.faq-item').forEach(function (otherItem) {
-          otherItem.classList.remove('open');
-          otherItem.querySelector('.faq-answer').style.maxHeight = null;
-          otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-          otherItem.querySelector('.faq-question span:last-child').textContent = '+';
+        document.querySelectorAll(".faq-item").forEach(function (otherItem) {
+          otherItem.classList.remove("open");
+          otherItem.querySelector(".faq-answer").style.maxHeight = null;
+          otherItem.querySelector(".faq-question span:last-child").textContent = "+";
         });
 
         if (!isOpen) {
-          item.classList.add('open');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-          button.setAttribute('aria-expanded', 'true');
-          icon.textContent = '−';
+          item.classList.add("open");
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          icon.textContent = "−";
         }
       });
     });
